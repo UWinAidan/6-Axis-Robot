@@ -1,2 +1,50 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# ---- Binary, kept in normal git (small) -------------------------------------
+*.xlsx binary
+*.xlsm binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# ---- Git LFS: large binary files -------------------------------------------
+# Autodesk Inventor
+*.ipt filter=lfs diff=lfs merge=lfs -text
+*.iam filter=lfs diff=lfs merge=lfs -text
+*.idw filter=lfs diff=lfs merge=lfs -text
+*.ipn filter=lfs diff=lfs merge=lfs -text
+*.dwg filter=lfs diff=lfs merge=lfs -text
+
+# Neutral CAD and print files
+*.step filter=lfs diff=lfs merge=lfs -text
+*.stp filter=lfs diff=lfs merge=lfs -text
+*.iges filter=lfs diff=lfs merge=lfs -text
+*.igs filter=lfs diff=lfs merge=lfs -text
+*.x_t filter=lfs diff=lfs merge=lfs -text
+*.sat filter=lfs diff=lfs merge=lfs -text
+*.stl filter=lfs diff=lfs merge=lfs -text
+*.3mf filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+
+# Documents and archives
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+
+# Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+
+# Photos and renders (images under docs/images stay in normal git so they
+# always show in the docs; keep those small)
+media/**/*.png filter=lfs diff=lfs merge=lfs -text
+media/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+media/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+media/**/*.heic filter=lfs diff=lfs merge=lfs -text
+
+# ---- Text files that must keep their line endings ---------------------------
+*.csv text eol=lf
+*.md text eol=lf
