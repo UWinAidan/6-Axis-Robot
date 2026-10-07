@@ -1,0 +1,58 @@
+# ---- Autodesk Inventor ------------------------------------------------------
+OldVersions/
+*.lck
+lockfile.lck
+*.bak
+
+# ---- FEA (Inventor Nastran) -------------------------------------------------
+# Solver output is large and can be regenerated. Keep the model, the setup
+# notes and a report; put raw solver output in a folder named "results".
+analysis/fea/**/results/
+*.fno
+*.op2
+*.f04
+*.f06
+
+# ---- KiCad ------------------------------------------------------------------
+*-backups/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+fp-info-cache
+_autosave-*
+~*.lck
+\#auto_saved_files#
+
+# ---- Firmware (PlatformIO / Arduino / Teensy) -------------------------------
+.pio/
+.pioenvs/
+.piolibdeps/
+build/
+*.hex
+*.elf
+*.o
+
+# ---- Python -----------------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---- Editors and OS ---------------------------------------------------------
+.vs/
+.vscode/*
+!.vscode/extensions.json
+*.user
+*.suo
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp
+
+# ---- Kept local, not for the public repo ------------------------------------
+# Vendor quotes, invoices and anything with account or contact details
+bom/quotes/
+private/
